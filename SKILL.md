@@ -1,6 +1,6 @@
 ---
 name: shutup
-description: Use this skill whenever the user asks to write, review, compress, prune, tighten, or clean up an AI-facing prompt, plan, outline, task list, handoff, agent instruction, or system instruction. Also use it when creating a prompt, plan, outline, or handoff from scratch for another AI or agent to read. This skill prevents verbose AI-to-AI instructions, over-explaining, over-planning, generic reminders, early-assumption lock-in, and human-unreadable AI boilerplate. If no compression ratio is specified, target 30%-50% of the original length.
+description: "Compress bloated AI prompts, plans, outlines, and agent instructions to 30-50%. Removes verbosity, boilerplate, over-explaining, and prompt bloat. For prompt engineering, reducing verbose AI output, and stopping plan drift during iteration."
 ---
 
 # shutup

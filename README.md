@@ -1,5 +1,7 @@
 # shutup — Kill Prompt Bloat
 
+[![skills.sh](https://skills.sh/b/NEUwpy/shutup-skill)](https://skills.sh/NEUwpy/shutup-skill)
+
 > AI writes verbose prompts, plans, and outlines. This skill makes them shut up.
 
 **Problem:** AI-generated instructions keep getting longer with each iteration — full of filler, obvious advice, and premature detail. The result is bloated prompts that confuse the next AI and drift from the original goal.
@@ -33,13 +35,23 @@ Compresses AI-facing artifacts — prompts, plans, outlines, handoffs, task list
 - Handoff between AI agents is full of noise
 - Creating a clean prompt from scratch for another AI
 
-## Installation (Hermes Agent)
+## Installation
 
-```
-~/.hermes/skills/shutup/SKILL.md
+**Any agent (via skills CLI):**
+```bash
+npx skills add NEUwpy/shutup-skill -g -y
 ```
 
-Or copy `SKILL.md` into any Hermes skills directory.
+**Hermes Agent (manual):**
+```bash
+# Copy SKILL.md to your skills directory
+cp SKILL.md ~/.hermes/skills/shutup/SKILL.md
+```
+
+**Claude Code / Cursor / Codex / OpenCode:**
+```bash
+npx skills add NEUwpy/shutup-skill -a claude-code -a cursor -y
+```
 
 ## Core Principle
 
