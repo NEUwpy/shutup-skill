@@ -1,36 +1,56 @@
-# shutup
+# shutup — Kill Prompt Bloat
 
-压缩和精简 AI 面向的 prompt、plan、outline、handoff。
+> AI writes verbose prompts, plans, and outlines. This skill makes them shut up.
 
-## 什么时候用
+**Problem:** AI-generated instructions keep getting longer with each iteration — full of filler, obvious advice, and premature detail. The result is bloated prompts that confuse the next AI and drift from the original goal.
 
-- 给另一个 AI 写 prompt/plan/outline/handoff
-- 压缩已有的 AI 生成内容
-- 去除冗余、套话、过度规划
-- 防止 prompt 膨胀
+**Solution:** A compression skill that treats the reader as a competent AI, cuts noise, and preserves only what steers execution.
 
-## 默认行为
+---
 
-如果没有指定压缩比例，默认压缩到原文的 30%-50%。
+## What It Does
 
-## 核心原则
+Compresses AI-facing artifacts — prompts, plans, outlines, handoffs, task lists — to 30–50% of original length by default.
 
-1. 先删后改
-2. 保留意图，不加新需求
-3. 把读者当成熟 AI，不需要手把手教
-4. Plan 只列检查点，不模拟未来细节
-5. 最好的输出是能正确引导下一个 actor 的最短版本
+**Removes:**
+- Repeated goals and motivational filler
+- Generic workflow advice ("be careful", "ensure quality")
+- Speculative branches and premature implementation detail
+- Fallback trees not needed yet
+- Phrasing that exists only to sound professional
 
-## 安装
+**Keeps:**
+- Goal, constraints, scope boundaries
+- Non-obvious context
+- Expected output and validation criteria
+- Stop conditions and blocking questions
 
-将 `SKILL.md` 放到你的 Hermes skills 目录下：
+## When to Use
+
+- AI-generated prompt is bloated and needs tightening
+- Plan/outline drifts into premature detail
+- Iterating a prompt keeps making it worse
+- Handoff between AI agents is full of noise
+- Creating a clean prompt from scratch for another AI
+
+## Installation (Hermes Agent)
 
 ```
 ~/.hermes/skills/shutup/SKILL.md
 ```
 
-或通过 Hermes CLI 安装：
+Or copy `SKILL.md` into any Hermes skills directory.
 
-```bash
-hermes skill install shutup
-```
+## Core Principle
+
+The reader is a capable AI. Don't teach it what it already knows.
+
+---
+
+## 中文说明
+
+**shutup** 是一个提示词压缩 skill，专门解决 AI 写的 prompt/plan/outline 越改越长、充满废话的问题。
+
+默认压缩到原文 30%-50%，保留目标、约束、边界，删除套话、过度规划和假设性内容。
+
+适用于 Hermes Agent，将 `SKILL.md` 放到 skills 目录即可使用。
